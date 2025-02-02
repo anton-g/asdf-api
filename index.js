@@ -8,9 +8,6 @@ app.use(express.urlencoded({ extended: true }))
 
 const baseUrl = process.env.URL // Set to ngrok url to test
 const discordWebhook = process.env.DISCORD_WEBHOOK
-const username = process.env.USERNAME
-const password = process.env.PASSWORD
-const key = Buffer.from(username + ':' + password).toString('base64')
 
 app.get('/', function (req, res) {
   res.status(200)
